@@ -1,0 +1,26 @@
+MDBoxLayout:
+    orientation: "vertical"
+    padding: 64
+    spacing: 16
+
+    MDTextField:
+        id: eingabe
+        text: ""
+        hint_text: "Schreib etwas..."
+        
+    MDBoxLayout:
+        orientation: "horizontal"
+        spacing: 16
+        MDRaisedButton:
+            id: buttton_eingabe
+            text: "eingeben"
+            on_press: app.enter()
+        MDRaisedButton:
+            id: button_loeschen
+            text: "löschen"
+            on_press: app.clear()
+            md_bg_color: 255/255, 23/255, 33/255, 1
+
+    MDLabel:
+        id: ausgabe
+        text: ""

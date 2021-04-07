@@ -1,0 +1,23 @@
+BoxLayout:
+    orientation: "vertical"
+    MDToolbar:
+        id: toolbar
+        title: "Notizen"
+        elevation: 10
+        right_action_items: [["plus", lambda x: app.add_note("")]]
+    ScrollView:
+        MDList:
+            id: liste
+
+<MyButton>:
+    orientation: "horizontal"
+    size: dp(60), dp(60)
+    padding: dp(10)
+    spacing: dp(10)
+    MDTextField:
+        id: textfeld
+        text: ""
+    MDIconButton:
+        id: button
+        icon: "check"
+        on_press: app.remove_note(self.parent)

@@ -1,0 +1,57 @@
+MDBoxLayout:
+    orientation: "vertical"
+    MDToolbar:
+        title: "Ticket-App"
+
+    MDBoxLayout:
+        orientation: "vertical"
+        padding: 10
+        spacing: 16
+
+        MDBoxLayout:
+            orientation: "horizontal"
+            adaptive_height: True
+            
+            MDLabel:
+                id: label_ticket1
+                text: app.ticket1.film_titel()
+                halign: "center"
+            MDIconButton:
+                icon: "plus"
+                on_press: app.hinzufuegen(app.ticket1)
+                halign: "center"
+            MDIconButton:
+                icon: "minus"
+                on_press: app.entfernen(app.ticket1)
+                halign: "center"
+            MDLabel:
+                id: ticket1_anzahl
+                halign: "center"
+                text: "0 x"
+
+        MDBoxLayout:
+            orientation: "horizontal"
+            adaptive_height: True
+            
+            MDLabel:
+                id: label_ticket2
+                text: app.ticket2.film_titel()
+                halign: "center"
+            MDIconButton:
+                icon: "plus"
+                on_press: app.hinzufuegen(app.ticket2)
+                halign: "center"
+            MDIconButton:
+                icon: "minus"
+                on_press: app.entfernen(app.ticket2)
+                halign: "center"
+            MDLabel:
+                id: ticket2_anzahl
+                halign: "center"
+                text: "0 x"
+
+        MDLabel:
+            id: label_preis
+            text: "Preis insgesamt: "
+        BoxLayout:
+            orientation: "horizontal"
