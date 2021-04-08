@@ -27,7 +27,6 @@ class Notizen(MDApp):
 class MyButton(BoxLayout):
 
     def __init__(self, text):
-        self.c += 1
         super().__init__()
         self.ids.textfeld.text = text
     

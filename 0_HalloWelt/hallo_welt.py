@@ -1,6 +1,6 @@
 from kivymd.app import MDApp
 
-class MainApp(MDApp):
+class Hallo_Welt(MDApp):
     pass
 
-MainApp().run()
+Hallo_Welt().run()
